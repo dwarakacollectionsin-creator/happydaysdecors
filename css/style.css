@@ -1,194 +1,285 @@
+/* ===========================
+   HAPPY DAYS DECORS
+   STYLE.CSS - PART 1
+=========================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
 
 *{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body{
+/* Variables */
 
-background:#111;
-
-font-family:Poppins,sans-serif;
-
-color:white;
-
-}
 :root{
-  --primary:#111111;
-  --secondary:#D4AF37;
-  --white:#ffffff;
-  --light:#f8f5ef;
-  --gray:#9a9a9a;
-  --radius:16px;
-  --transition:0.3s ease;
-  --shadow:0 10px 30px rgba(0,0,0,.25);
+    --primary:#111111;
+
+    --secondary:#D4AF37;
+
+    --white:#ffffff;
+
+    --light:#f7f7f7;
+
+    --gray:#888888;
+
+    --shadow:0 10px 30px rgba(0,0,0,.15);
+
+    --radius:18px;
+
+    --transition:.3s;
+
 }
+
+/* Scroll */
 
 html{
-  scroll-behavior:smooth;
+
+    scroll-behavior:smooth;
+
 }
+
+/* Body */
 
 body{
-  background:var(--primary);
-  color:var(--white);
-  font-family:'Poppins',sans-serif;
-  overflow-x:hidden;
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+/* Images */
 
 img{
-  width:100%;
-  display:block;
+
+    width:100%;
+
+    display:block;
+
 }
+
+/* Links */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* List */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* Container */
 
 .container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
 }
+
+/* Section */
 
 section{
-  padding:80px 0;
+
+    padding:80px 0;
+
 }
 
-.gold{
-  color:var(--secondary);
+/* Buttons */
+
+.book-btn{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:var(--secondary);
+
+    color:#111;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
 }
 
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  background:var(--secondary);
-  color:#111;
-  border-radius:50px;
-  font-weight:600;
-  transition:var(--transition);
+.book-btn:hover{
+
+    transform:translateY(-3px);
+
 }
 
-.btn:hover{
-  transform:translateY(-3px);
+.call-btn{
+
+    display:inline-block;
+
+    padding:13px 24px;
+
+    border:2px solid var(--secondary);
+
+    color:var(--secondary);
+
+    border-radius:50px;
+
+    transition:var(--transition);
+
 }
-/* HEADER */
+
+.call-btn:hover{
+
+    background:var(--secondary);
+
+    color:#111;
+
+}
+
+/* Section Title */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:50px;
+
+    color:var(--secondary);
+
+}
+
+/* Header */
 
 .header{
 
-position:sticky;
+    position:sticky;
 
-top:0;
+    top:0;
 
-background:#111111;
+    width:100%;
 
-z-index:999;
+    background:#111111;
 
-border-bottom:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:999;
 
 }
+
+/* Navigation */
 
 .nav{
 
-height:80px;
+    display:flex;
 
-display:flex;
+    align-items:center;
 
-align-items:center;
+    justify-content:space-between;
 
-justify-content:space-between;
+    height:80px;
 
 }
+
+/* Logo */
 
 .logo img{
 
-height:60px;
+    height:60px;
+
+    width:auto;
 
 }
 
+/* Menu */
+
 .menu{
 
-display:flex;
+    display:flex;
 
-gap:28px;
+    gap:30px;
 
 }
 
 .menu a{
 
-color:#ffffff;
+    color:white;
 
-font-size:15px;
+    font-size:15px;
 
-font-weight:500;
+    font-weight:500;
 
-transition:.3s;
+    transition:.3s;
 
 }
 
 .menu a:hover{
 
-color:#D4AF37;
+    color:var(--secondary);
 
 }
 
-.active{
+.menu .active{
 
-color:#D4AF37 !important;
+    color:var(--secondary);
 
 }
+
+/* Right */
 
 .nav-right{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:15px;
-
-}
-
-.phone{
-
-color:#fff;
-
-font-size:14px;
+    gap:15px;
 
 }
 
-.btn{
+/* Mobile Menu */
 
-background:#D4AF37;
+.mobile-menu{
 
-padding:12px 24px;
+    display:none;
 
-border-radius:40px;
+    font-size:28px;
 
-color:#111;
-
-font-weight:600;
+    cursor:pointer;
 
 }
 
-.btn:hover{
+/* Hero */
 
-transform:translateY(-2px);
+.hero{
 
-}
+    min-height:100vh;
 
-.menu-btn{
+    display:flex;
 
-display:none;
+    align-items:center;
 
-font-size:28px;
-
-cursor:pointer;
-
-color:white;
+    background:#111111;
 
 }
