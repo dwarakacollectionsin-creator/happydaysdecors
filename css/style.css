@@ -18,3 +18,62 @@ font-family:Poppins,sans-serif;
 color:white;
 
 }
+:root{
+  --primary:#111111;
+  --secondary:#D4AF37;
+  --white:#ffffff;
+  --light:#f8f5ef;
+  --gray:#9a9a9a;
+  --radius:16px;
+  --transition:0.3s ease;
+  --shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--primary);
+  color:var(--white);
+  font-family:'Poppins',sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+section{
+  padding:80px 0;
+}
+
+.gold{
+  color:var(--secondary);
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  background:var(--secondary);
+  color:#111;
+  border-radius:50px;
+  font-weight:600;
+  transition:var(--transition);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
