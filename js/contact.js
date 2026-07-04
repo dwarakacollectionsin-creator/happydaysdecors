@@ -6,7 +6,7 @@
 const form = document.getElementById("contactForm");
 const status = document.getElementById("status");
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwI0o48dhoUzjIPmeXMPmu8VaeoZAFW5TMwr01oRqK5RuyhuGokjLQ5IM_l4p0PWKag/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbxPVZttNsvQDDY6RlIK0Zw8M8mbRDae2WpvMHfndRj-lJshqVY0Init2viVoZRl-sAS/exec";
 
 form.addEventListener("submit", async (e) => {
 
@@ -53,7 +53,7 @@ form.addEventListener("submit", async (e) => {
             setTimeout(()=>{
 
                 window.open(
-                    "https://wa.me/9908180194?text=Hi%20Happy%20Days%20Decors,%20I%20have%20submitted%20a%20booking%20request.",
+                    "https://wa.me/919999999999?text=Hi%20Happy%20Days%20Decors,%20I%20have%20submitted%20a%20booking%20request.",
                     "_blank"
                 );
 
