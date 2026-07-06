@@ -6,7 +6,7 @@
 const form = document.getElementById("contactForm");
 const status = document.getElementById("status");
 
-const API_URL = "https://script.google.com/macros/s/AKfycbwCinUKl2rNWMRnZER4INQSijnP-bQHNtuKh4uv9kBa575iDqwtJQzw3n0eJa6UBGS5/exec";
+const API_URL = "https://script.google.com/macros/s/AKfycbzR0KwlasL9LXtzuN8JpG2Ow8kSdmND6SImA2YKK0S6spjISgKbrAngKcCtbpX5Ips/exec";
 
 form.addEventListener("submit", async (e) => {
 
