@@ -1,835 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Days Decors - Let's Make Every Moment Beautiful</title>
-    <style>
-        :root {
-            --gold-primary: #dfba6b;
-            --gold-secondary: #f3e1ad;
-            --bg-dark: #070707;
-            --card-bg: #0e0e0e;
-            --border-gold: rgba(223, 186, 107, 0.3);
-            --text-light: #ffffff;
-            --text-muted: #a5a5a5;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            overflow-x: hidden;
-        }
-
-        /* Utility Classes */
-        .gold-text {
-            color: var(--gold-primary);
-            background: linear-gradient(45deg, #b8860b, #e6ca65, #b8860b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #dfba6b 0%, #b88d3c 100%);
-            color: #000;
-            padding: 10px 24px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--gold-primary);
-            border: 1px solid var(--gold-primary);
-            padding: 10px 24px;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-
-        .btn-outline:hover {
-            background: var(--gold-primary);
-            color: #000;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            position: relative;
-        }
-
-        .section-title::before, .section-title::after {
-            content: " ♥ ";
-            color: var(--gold-primary);
-            font-size: 1.2rem;
-            vertical-align: middle;
-        }
-
-        /* Header / Navbar */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 6%;
-            background: rgba(7, 7, 7, 0.95);
-            border-bottom: 1px solid rgba(223, 186, 107, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .logo-title {
-            font-family: 'Georgia', serif;
-            font-size: 1.5rem;
-            font-style: italic;
-            font-weight: bold;
-            line-height: 1;
-        }
-
-        .logo-subtext {
-            font-size: 0.6rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--gold-primary);
-            margin-top: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav ul li a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.2s;
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: var(--gold-primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 85vh;
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(7,7,7,1)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23dfba6b" opacity="0.3"/></svg>');
-            display: flex;
-            align-items: center;
-            padding: 0 8%;
-        }
-
-        .hero-content {
-            max-width: 500px;
-            z-index: 2;
-        }
-
-        .hero-sub {
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .hero-main-title {
-            font-family: 'Georgia', serif;
-            font-size: 3.5rem;
-            font-style: italic;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero-description {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-        }
-
-        /* Right side decorative elements representing the 18th birthday photo backdrop */
-        .hero-display {
-            position: absolute;
-            right: 8%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 450px;
-            height: 500px;
-            border-radius: 200px 200px 0 0;
-            background: linear-gradient(180deg, #151515 0%, #0a0a0a 100%);
-            border: 2px solid var(--gold-primary);
-            box-shadow: 0 0 30px rgba(223, 186, 107, 0.2);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .hero-display h2 {
-            font-family: 'Georgia', serif;
-            font-size: 2.5rem;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .hero-display .giant-number {
-            font-size: 7rem;
-            font-weight: bold;
-            color: transparent;
-            background: linear-gradient(180deg, var(--gold-secondary), var(--gold-primary));
-            -webkit-background-clip: text;
-            text-shadow: 0 0 20px rgba(223,186,107,0.4);
-        }
-
-        /* Stats Counter Bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            padding: 40px 10%;
-            background: #0b0b0b;
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 2rem;
-            color: var(--gold-primary);
-            margin-bottom: 5px;
-        }
-
-        .stat-item p {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-        }
-
-        /* Occasions Section */
-        .occasions {
-            padding: 60px 6%;
-            text-align: center;
-        }
-
-        .occasions-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-
-        .occasion-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(223, 186, 107, 0.1);
-            padding: 25px 15px;
-            border-radius: 8px;
-            transition: transform 0.3s, border-color 0.3s;
-            cursor: pointer;
-        }
-
-        .occasion-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-primary);
-        }
-
-        .occasion-icon {
-            width: 40px;
-            height: 40px;
-            margin: 0 auto 15px;
-            fill: var(--gold-primary);
-        }
-
-        .occasion-card p {
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 60px 6%;
-            background: #090909;
-            text-align: center;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1 / 1;
-            background: #151515;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid rgba(223, 186, 107, 0.1);
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: var(--gold-secondary);
-            text-shadow: 1px 1px 4px #000;
-        }
-
-        /* Unique placeholder backgrounds simulating the design theme frames */
-        .gallery-item:nth-child(1) { background: linear-gradient(135deg, #111, #2b2313); }
-        .gallery-item:nth-child(2) { background: linear-gradient(135deg, #2c1a24, #111); }
-        .gallery-item:nth-child(3) { background: linear-gradient(135deg, #2e1212, #111); }
-        .gallery-item:nth-child(4) { background: linear-gradient(135deg, #12222e, #111); }
-        .gallery-item:nth-child(5) { background: linear-gradient(135deg, #222, #111); }
-
-        /* Packages Section */
-        .packages {
-            padding: 60px 6%;
-        }
-
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .package-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-gold);
-            border-radius: 8px;
-            padding: 30px 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .package-card.popular {
-            border: 2px solid var(--gold-primary);
-            transform: scale(1.03);
-        }
-
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gold-primary);
-            color: #000;
-            padding: 2px 12px;
-            font-size: 0.65rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 20px;
-        }
-
-        .package-name {
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-        }
-
-        .package-price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin: 15px 0;
-            color: var(--gold-secondary);
-        }
-
-        .package-features {
-            list-style: none;
-            text-align: left;
-            margin: 20px 0 30px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .package-features li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .package-features li::before {
-            content: "✓";
-            color: var(--gold-primary);
-            font-weight: bold;
-        }
-
-        .package-card .btn-gold, .package-card .btn-outline {
-            width: 100%;
-        }
-
-        .package-disclaimer {
-            text-align: center;
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            margin-top: 25px;
-        }
-
-        /* Why Choose Us Section */
-        .why-us {
-            padding: 60px 6%;
-            background: #090909;
-            border-top: 1px solid var(--border-gold);
-        }
-
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 15px;
-            text-align: center;
-        }
-
-        .why-item h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            margin: 10px 0 4px;
-            color: var(--gold-primary);
-        }
-
-        .why-item p {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .why-icon {
-            width: 32px;
-            height: 32px;
-            fill: var(--gold-primary);
-            margin: 0 auto;
-        }
-
-        /* Footer Section */
-        footer {
-            background: #050505;
-            padding: 60px 8% 20px;
-            border-top: 1px solid rgba(223, 186, 107, 0.1);
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand .logo-container {
-            align-items: flex-start;
-            text-align: left;
-            margin-bottom: 15px;
-        }
-
-        .footer-brand p {
-            line-height: 1.6;
-            font-size: 0.75rem;
-        }
-
-        .footer-column h5 {
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links li a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links li a:hover {
-            color: var(--gold-primary);
-        }
-
-        .contact-item {
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .instagram-mini-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6px;
-        }
-
-        .insta-tile {
-            aspect-ratio: 1/1;
-            background: #111;
-            border-radius: 4px;
-            border: 1px solid rgba(223,186,107,0.1);
-        }
-
-        .copyright-bar {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-        }
-
-        /* Floating WhatsApp Button Simulation */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            cursor: pointer;
-        }
-
-        /* Responsive Adaptations */
-        @media(max-width: 1024px) {
-            .hero-display { display: none; }
-            .occasions-grid { grid-template-columns: repeat(3, 1fr); }
-            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-            .packages-grid { grid-template-columns: repeat(2, 1fr); }
-            .why-us-grid { grid-template-columns: repeat(3, 1fr); gap: 25px; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-
-        @media(max-width: 600px) {
-            nav { display: none; }
-            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-            .occasions-grid { grid-template-columns: repeat(2, 1fr); }
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-            .packages-grid { grid-template-columns: 1fr; }
-            .why-us-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Days Decors Service - Magical Event Styling</title>
+  
+  <!-- Font Links preserved from the original template -->
+  <link crossorigin href="https://cdnjs.cloudflare.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link rel="stylesheet" href="style.css"> <!-- Replace with your actual stylesheet path -->
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <span class="logo-title gold-text">Happy Days</span>
-            <span class="logo-subtext">Decors</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Occasions</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
-        <button class="btn-gold">Book Now</button>
-    </header>
+  <!-- Top Announcement Bar -->
+  <header>
+    <a href="services.html" title="Book Event Services">
+      <div class="top-banner">
+        <span>SPECIAL OFFER</span>
+        <span>10% OFF ON COMPLIMENTARY PHOTOGRAPHY STAGE</span>
+        <span>Tap to Book</span>
+      </div>
+    </a>
+  </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo-container" style="align-items: flex-start; margin-bottom: 20px;">
-                <span class="logo-title gold-text" style="font-size: 2.2rem;">Happy Days</span>
-                <span class="logo-subtext" style="font-size: 0.8rem; letter-spacing: 6px;">Decors</span>
-            </div>
-            <p class="hero-sub">Let's Make Every</p>
-            <h1 class="hero-main-title gold-text">Moment Beautiful</h1>
-            <p class="hero-description">From birthdays to weddings, small celebrations to big events - We decorate your moments with love, creativity and perfection.</p>
-            <div class="hero-buttons">
-                <button class="btn-gold">Book Your Date</button>
-                <button class="btn-outline">Our Services &gt;</button>
-            </div>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <i></i> Happy Days Decors
+      </a>
+      
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <!-- Booking Cart Counter -->
+      <a href="checkout.html" class="cart-icon">
+        <i></i>
+        <span>0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img alt="Magical Happy Days Event Decors" src="images/happy_days_hero.png">
+    <div class="overlay"></div>
+    
+    <div class="hero-content">
+      <div>
+        <span>Design the Tradition</span>
+        <h1>Creating Unforgettable Memories For Your Happy Days</h1>
+        <p>Experience the premium event styling of Andhra with our elegant, vibrant, and perfectly managed custom decorations. Made with passion, precision, and the finest thematic details.</p>
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary">Book Now</a>
+          <a href="about.html" class="btn-secondary">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Icons Section -->
+  <div class="features-bar">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i></i>
+          <span>100% Customized Designs</span>
+        </div>
+        <div class="feature-item">
+          <i></i>
+          <span>Premium Material & Setup</span>
+        </div>
+        <div class="feature-item">
+          <i></i>
+          <span>Delivered On Time</span>
+        </div>
+        <div class="feature-item">
+          <i></i>
+          <span>Secure Booking Plans</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Best Sellers / Premium Packages Section -->
+  <section class="products-section">
+    <div class="section-title">
+      <h2>Our Featured Decor Services</h2>
+      <p>Handpicked themes loved and trusted by our clients.</p>
+    </div>
+    
+    <div class="products-grid">
+      
+      <!-- Package 1: Traditional Wedding -->
+      <div class="product-card">
+        <div class="image-wrapper">
+          <div class="badge"><span>Grand</span></div>
+          <img alt="Wedding Decor Theme" loading="lazy" src="images/wedding_decor.png">
+        </div>
+        <div class="card-content">
+          <h3>Traditional Wedding Setup</h3>
+          <p>Pure Indian style **rich floral and royal backdrop** layouts with **custom stage illumination** setups.</p>
+          <div class="pricing-action">
+            <select name="package-tier">
+              <option value="45000">Standard Stage Setup</option>
+              <option value="85000">Premium Floral Backdrop</option>
+              <option value="150000">Grand Royal Wedding Tier</option>
+            </select>
+            <span class="price">₹45,000</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Package 2: Birthday & Theme Parties -->
+      <div class="product-card">
+        <div class="image-wrapper">
+          <div class="badge"><span>Vibrant</span></div>
+          <img alt="Birthday Theme Decor" loading="lazy" src="images/birthday_decor.png">
+        </div>
+        <div class="card-content">
+          <h3>Birthday & Theme Decors</h3>
+          <p>Authentic bespoke birthday event spaces—**pure custom balloon arches and character cutout** styles with **premium neon steps**.</p>
+          <div class="pricing-action">
+            <select name="package-tier">
+              <option value="15000">Basic Balloon Theme</option>
+              <option value="30000">Deluxe Neon Theme</option>
+              <option value="60000">Grand 3D Custom Theme</option>
+            </select>
+            <span class="price">₹15,000</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Package 3: Haldi & Sangeet -->
+      <div class="product-card">
+        <div class="image-wrapper">
+          <div class="badge"><span>Traditional</span></div>
+          <img alt="Haldi Sangeet Decor" loading="lazy" src="images/haldi_decor.png">
+        </div>
+        <div class="card-content">
+          <h3>Haldi & Sangeet Festive Decor</h3>
+          <p>Traditional festive styling, rich in marigold arrangements with **smooth fabric draping and seating steps**.</p>
+          <div class="pricing-action">
+            <select name="package-tier">
+              <option value="20000">Standard Marigold Decor</option>
+              <option value="40000">Premium Swing & Props</option>
+              <option value="75000">Grand Combined Canopy</option>
+            </select>
+            <span class="price">₹20,000</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Package 4: Corporate & Minimalist Events -->
+      <div class="product-card">
+        <div class="image-wrapper">
+          <div class="badge"><span>Sleek</span></div>
+          <img alt="Corporate Events Minimalist Setup" loading="lazy" src="images/corporate_decor.png">
+        </div>
+        <div class="card-content">
+          <h3>Corporate & Elegant Galas</h3>
+          <p>Classic formal or minimalist setup configurations grounded perfectly for formal ceremonies or high-end product launches.</p>
+          <div class="pricing-action">
+            <select name="package-tier">
+              <option value="35000">Standard Media Wall</option>
+              <option value="65000">Premium LED Stage Backdrop</option>
+              <option value="120000">Elite VIP Gala Design</option>
+            </select>
+            <span class="price">₹35,000</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="view-all-container">
+      <a href="services.html" class="btn-view-all">View All Decor Concepts</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Our Clients Say</h2>
+        <p>Real stories from our happy families and event coordinators.</p>
+      </div>
+      <div class="testimonials-grid">
+        
+        <div class="testimonial-card">
+          <i></i>
+          <div class="stars">
+            <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
+          </div>
+          <h3>“Absolutely spectacular!”</h3>
+          <p>“These guys turned our venue into a dreamland! Fresh floral arrangements, perfectly color-coordinated backdrop structures, and complete stress-free execution. Highly recommended!”</p>
+          <div class="client-profile">
+            <img alt="Sri Hari" loading="lazy" src="images/hari.jpeg">
+            <span>Sri Hari</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <i></i>
+          <div class="stars">
+            <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
+          </div>
+          <h3>“Perfect execution of details”</h3>
+          <p>“I’ve worked with multiple vendors before, but Happy Days Decors truly stands out. Sophisticated premium layouts, highly receptive team, and stunning outputs. It goes perfectly with the grandeur of functions!”</p>
+          <div class="client-profile">
+            <img alt="Geetha" loading="lazy" src="images/geetha.jpeg">
+            <span>Geetha</span>
+          </div>
         </div>
         
-        <div class="hero-display">
-            <h2>Happy <br><span class="gold-text">Birthday</span></h2>
-            <div class="giant-number">18</div>
-        </div>
-    </section>
-
-    <div class="stats-bar">
-        <div class="stat-item">
-            <h3>500+</h3>
-            <p>Happy Clients</p>
-        </div>
-        <div class="stat-item">
-            <h3>700+</h3>
-            <p>Events Done</p>
-        </div>
-        <div class="stat-item">
-            <h3>10+</h3>
-            <p>Occasions</p>
-        </div>
-        <div class="stat-item">
-            <h3>100%</h3>
-            <p>Satisfaction</p>
-        </div>
+      </div>
     </div>
+  </section>
 
-    <section class="occasions">
-        <h2 class="section-title gold-text">Occasions We Decorate</h2>
-        <div class="occasions-grid">
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M12 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4m0-4a8 8 0 1 0 8 8 8 8 0 0 0-8-8z"/></svg>
-                <p>Birthday</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 21 5.42 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                <p>Anniversary</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M20 12h-4v-4h4v4m-6-4h-4v4h4v-4m-6 0H4v4h4v-4m6 6h-4v4h4v-4z"/></svg>
-                <p>Baby Shower</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm1 17.93V13h2v-2h-2V9h-2v2H9v2h2v6.93A8.001 8.001 0 0 1 4 12a8 8 0 1 1 16 0 8.001 8.001 0 0 1-7 7.93z"/></svg>
-                <p>Engagement</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.5 3 21 5.42 21 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                <p>Proposal</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                <p>Welcome Baby</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                <p>House Warming</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                <p>Graduation</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-                <p>Corporate Events</p>
-            </div>
-            <div class="occasion-card">
-                <svg class="occasion-icon" viewBox="0 0 24 24"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2z"/></svg>
-                <p>Surprise Room</p>
-            </div>
-        </div>
-        <button class="btn-outline">View All Occasions &gt;</button>
-    </section>
+  <!-- Middle Call-To-Action Banner -->
+  <section class="gift-banner">
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <div>
+        <span>Bespoke Styling Plans</span>
+        <h2>Give the Gift of a Breathtaking Setting</h2>
+        <p>Surprise your family and guests with rich, breathtaking event layouts crafted with premium decorations, modern style trends, and absolute dedication in every corner.</p>
+        <a href="services.html" class="btn-gift">Book a Date</a>
+      </div>
+    </div>
+  </section>
 
-    <section class="gallery">
-        <h2 class="section-title gold-text">Our Recent Decorations</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">Happy Birthday Theme</div>
-            <div class="gallery-item">Its A Baby Boy</div>
-            <div class="gallery-item">Will You Marry Me?</div>
-            <div class="gallery-item">Oh Baby Setup</div>
-            <div class="gallery-item">Congrats GRAD</div>
-        </div>
-        <button class="btn-outline">View Full Gallery &gt;</button>
-    </section>
-
-    <section class="packages">
-        <h2 class="section-title gold-text">Our Packages</h2>
-        <div class="packages-grid">
-            <div class="package-card">
-                <div>
-                    <p class="package-name">Basic Package</p>
-                    <p class="package-price">₹2,999</p>
-                    <ul class="package-features">
-                        <li>Balloon Decoration</li>
-                        <li>Basic Backdrop</li>
-                        <li>Name Banner</li>
-                        <li>Fairy Lights</li>
-                    </ul>
-                </div>
-                <button class="btn-gold">Book Now</button>
-            </div>
-
-            <div class="package-card">
-                <div>
-                    <p class="package-name">Standard Package</p>
-                    <p class="package-price">₹5,999</p>
-                    <ul class="package-features">
-                        <li>Premium Balloons</li>
-                        <li>Backdrop</li>
-                        <li>LED Letters (Small)</li>
-                        <li>Fairy Lights & More</li>
-                    </ul>
-                </div>
-                <button class="btn-gold">Book Now</button>
-            </div>
-
-            <div class="package-card popular">
-                <span class="popular-badge">Most Popular</span>
-                <div>
-                    <p class="package-name">Premium Package</p>
-                    <p class="package-price">₹9,999</p>
-                    <ul class="package-features">
-                        <li>Luxury Balloons</li>
-                        <li>Premium Backdrop</li>
-                        <li>LED Letters & Numbers</li>
-                        <li>Themed Decoration</li>
-                    </ul>
-                </div>
-                <button class="btn-gold">Book Now</button>
-            </div>
-
-            <div class="package-card">
-                <div>
-                    <p class="package-name">Custom Package</p>
-                    <p class="package-price" style="font-size: 1.4rem; padding: 5px 0;">GET QUOTE</p>
-                    <ul class="package-features">
-                        <li>Custom Themes</li>
-                        <li>Personalized Setup</li>
-                        <li>Full Event Support</li>
-                        <li>As Per Your Budget</li>
-                    </ul>
-                </div>
-                <button class="btn-outline">Contact Us</button>
-            </div>
-        </div>
-        <p class="package-disclaimer">* Prices may vary depending on your requirements.</p>
-    </section>
-
-    <section class="why-us">
-        <h2 class="section-title gold-text">Why Choose Happy Days Decors?</h2>
-        <div class="why-us-grid">
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
-                <h4>Creative</h4>
-                <p>Unique Ideas</p>
-            </div>
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
-                <h4>On Time</h4>
-                <p>Delivery</p>
-            </div>
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 4l7.53 13H4.47L12 6z"/></svg>
-                <h4>High Quality</h4>
-                <p>Materials</p>
-            </div>
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5 0.67 1.5 1.5-0.67 1.5-1.5 1.5z"/></svg>
-                <h4>Affordable</h4>
-                <p>Prices</p>
-            </div>
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 7s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                <h4>Professional</h4>
-                <p>Team</p>
-            </div>
-            <div class="why-item">
-                <svg class="why-icon" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM10.5 15l-3-3 1.414-1.414L10.5 12.172l4.586-4.586L16.5 9l-6 6z"/></svg>
-                <h4>100% Satisfaction</h4>
-                <p>Guaranteed</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="logo-container">
-                    <span class="logo-title gold-text">Happy Days</span>
-                    <span class="logo-subtext">Decors</span>
-                </div>
-                <p>We don't just decorate. We create experiences. Let us make your special moments unforgettable!</p>
-            </div>
-            
-            <div class="footer-column">
-                <h5>Contact Us</h5>
-                <p class="contact-item">📞 81257 27668<br>95081 80194<br>98496 63832</p>
-                <p class="contact-item">✉️ happydaysdecors@gmail.com</p>
-                <p class="contact-item">📍 Proddatur, Kadapa (Dist),<br>Andhra Pradesh</p>
-                <button class="btn-gold" style="margin-top: 10px; padding: 6px 16px; font-size: 0.75rem;">WhatsApp Us</button>
-            </div>
-
-            <div class="footer-column">
-                <h5>Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Occasions</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Packages</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h5>Follow Us</h5>
-                <p style="font-size: 0.75rem; margin-bottom: 12px;">📸 @happydaysdecors</p>
-                <div class="instagram-mini-grid">
-                    <div class="insta-tile"></div>
-                    <div class="insta-tile"></div>
-                    <div class="insta-tile"></div>
-                    <div class="insta-tile"></div>
-                    <div class="insta-tile"></div>
-                    <div class="insta-tile"></div>
-                </div>
-            </div>
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        
+        <div class="footer-about">
+          <h3><i></i> Happy Days Decors</h3>
+          <p>Bespoke, timeless, trustworthy, and grand. Bringing the ultimate party styling standards of Andhra straight to your celebrations.</p>
+          <div class="social-icons">
+            <a href="#" rel="noopener noreferrer" target="_blank"><i>IG</i></a>
+            <a href="#" rel="noopener noreferrer" target="_blank"><i>YT</i></a>
+          </div>
         </div>
         
-        <div class="copyright-bar">
-            © 2026 Happy Days Decors. All Rights Reserved. ♥
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </div>
-    </footer>
-
-    <div class="whatsapp-float">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.4 0 11.986 0c3.192.001 6.194 1.242 8.452 3.498c2.257 2.257 3.497 5.257 3.495 8.45c-.004 6.584-5.343 11.931-11.929 11.931c-2.006-.001-3.98-.506-5.733-1.468L0 24zm6.576-3.702l.413.245c1.512.897 3.256 1.371 5.04 1.372h.005c5.465 0 9.911-4.441 9.914-9.908c.002-2.648-1.026-5.139-2.897-7.01C17.222 3.125 14.735 2.1 12.1 2.1c-5.47 0-9.917 4.444-9.919 9.914c0 1.879.493 3.715 1.427 5.334l.269.467-1.014 3.702l3.77-.989z"/></svg>
+        
+        <div class="footer-contact">
+          <h3>Contact Info</h3>
+          <ul>
+            <li><i></i> Management Coordinator</li>
+            <li><i></i> 66-3-12, Marri Chettu Centre, NTR Circle, Patamata, Vijayawada, Andhra Pradesh, 520010.</li>
+            <li><i></i> <a href="tel:+919494345715">+91 94943 45715</a></li>
+            <li><i></i> <a href="mailto:happydaysdecors@gmail.com">happydaysdecors@gmail.com</a></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 Happy Days Decors Service. All Rights Reserved. Crafted with passion and elegance.</p>
+        <p>Website designed by <a href="https://www.instagram.com/funniii_media" rel="noopener noreferrer" target="_blank">@funniii_media</a></p>
+      </div>
     </div>
+  </footer>
+
+  <!-- Fixed WhatsApp Widget for quick bookings -->
+  <a href="https://wa.me/919494345715" class="whatsapp-widget" target="_blank" title="Chat on WhatsApp">
+    <i>WhatsApp Us</i>
+  </a>
 
 </body>
 </html>
