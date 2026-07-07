@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suravi Pickles - Our Products</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF8F5;
+        }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-dark-brown {
+            background-color: #231912;
+        }
+        .text-gold {
+            color: #E29543;
+        }
+        .bg-crimson {
+            background-color: #C82323;
+        }
+        .border-crimson {
+            border-color: #C82323;
+        }
+        .text-crimson {
+            color: #C82323;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, #5B1010 0%, #A31D1D 100%);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #231912;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C82323;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/#" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="bg-dark-brown text-white py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-40 shadow-md">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-pepper-hot text-2xl text-red-500 transform -rotate-45"></i>
+            <span class="serif-title text-xl md:text-2xl font-bold tracking-wide">Suravi Pickles</span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium text-sm tracking-wide items-center">
+            <a href="#" class="hover:text-gold transition-colors">Home</a>
+            <a href="#" class="text-gold border-b-2 border-gold pb-1">Products</a>
+            <a href="#" class="hover:text-gold transition-colors">About Us</a>
+            <a href="#" class="hover:text-gold transition-colors">Contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <button class="relative hover:text-gold transition-colors">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="absolute -top-2 -right-2 bg-crimson text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">0</span>
+            </button>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Products Sub-Hero Banner -->
+    <section class="hero-gradient text-white text-center py-16 px-6">
+        <div data-aos="zoom-in" data-aos-duration="800">
+            <h1 class="serif-title text-4xl md:text-5xl font-bold mb-2">Our Pickles & Powders</h1>
+            <p class="text-xs md:text-sm tracking-wider text-amber-300 font-medium">Home / Products</p>
+        </div>
+    </section>
+
+    <!-- Filters Row -->
+    <section class="py-8 px-4 max-w-7xl mx-auto overflow-x-auto whitespace-nowrap scrollbar-none">
+        <div class="flex justify-start md:justify-center items-center space-x-3 md:space-x-4 text-xs font-semibold tracking-wide">
+            <button class="bg-crimson text-white px-5 py-2.5 rounded-full transition-all shadow-sm">All Products</button>
+            <button class="bg-white border border-gray-200 text-gray-700 hover:border-crimson px-5 py-2.5 rounded-full transition-all">Veg Pickles</button>
+            <button class="bg-white border border-gray-200 text-gray-700 hover:border-crimson px-5 py-2.5 rounded-full transition-all">Non-Veg Pickles</button>
+            <button class="bg-white border border-gray-200 text-gray-700 hover:border-crimson px-5 py-2.5 rounded-full transition-all">Powders</button>
+            <button class="bg-white border border-gray-200 text-gray-700 hover:border-crimson px-5 py-2.5 rounded-full transition-all">Home Made Sweets</button>
+        </div>
+    </section>
+
+    <!-- Full Complete Grid Section -->
+    <section class="pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1: Amla Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Amla Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **extra red and spicy** Amla with **small pieces** in a premium glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 2: Tomato Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Tomato Pickle</h3><p class="text-gray-600 text-xs mb-4">Sun-dried tomatoes with **finely chopped** bits in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 3: Lemon Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Lemon Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **thick red and spicy** Lemon with **medium-sized pieces** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 4: Ginger Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Ginger Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **plain red spicy paste** Ginger with a **dense, smooth texture** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 5: Gongura Mirchi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Gongura Mirchi</h3><p class="text-gray-600 text-xs mb-4">Authentic **dark maroon** Gongura mirchi with **subtle green bits** of sorrel leaves in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 6: Gongura Pandumirchi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Gongura Pandumirchi</h3><p class="text-gray-600 text-xs mb-4">Premium **pure red spicy** Gongura Pandumirchi with **tiny bits** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 7: Mango Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Mango Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **thick red and spicy** Avakaya with **medium-sized pieces** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 8: Mixed Veg Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Mixed Veg Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **thick red and spicy** mixed vegetables with **medium-sized pieces** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 9: Kakarakai Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Kakarakai Pickle</h3><p class="text-gray-600 text-xs mb-4">Pure Indian style **thick red and spicy** Kakarakai (Bitter Gourd) with **medium-sized pieces** in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 10: Chicken Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Chicken Pickle</h3><p class="text-gray-600 text-xs mb-4">Homemade Chicken Pickle with **small pieces** in a premium glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹289</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 11: Gongura Chicken -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Gongura Chicken</h3><p class="text-gray-600 text-xs mb-4">Authentic **dark green** Gongura Chicken with **small pieces** in a premium glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹289</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 12: Chicken Boneless -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Chicken Boneless</h3><p class="text-gray-600 text-xs mb-4">Succulent boneless chicken **small chunks** preserved in a glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹369</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 13: Mutton Boneless -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Mutton Boneless</h3><p class="text-gray-600 text-xs mb-4">Succulent **Mutton Boneless** with **tiny chunks** in a luxury glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹589</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 14: Prawn Pickle -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Prawn Pickle</h3><p class="text-gray-600 text-xs mb-4">Coastal prawns **small chunks** in a spicy masala glass jar.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹499</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 15: Nallakaram -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Nallakaram</h3><p class="text-gray-600 text-xs mb-4">Classic traditional Nallakaram ground perfectly.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹159</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 16: Nuvvulapodi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Nuvvulapodi</h3><p class="text-gray-600 text-xs mb-4">Finely ground sesame spice blend perfect for hot rice.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹169</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 17: Munagaku Karampodi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Munagaku Karampodi</h3><p class="text-gray-600 text-xs mb-4">Authentic **subtle dark-green** Drumstick leaf spicy powder in a traditional bowl.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹159</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 18: Karevepaku Karam -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Karevepaku Karam</h3><p class="text-gray-600 text-xs mb-4">Authentic homemade traditional Curry Leaf spicy powder in a bowl.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹159</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 19: Masala Karam -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Masala Karam</h3><p class="text-gray-600 text-xs mb-4">Authentic homemade Masala Karam for that perfect spicy Andhra kick.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹189</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 20: Chilli Powder -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Chilli Powder</h3><p class="text-gray-600 text-xs mb-4">Vibrant bright red Chilli powder with an **ultra-fine, smooth texture**.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹179</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 21: Biryani Masala -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Biryani Masala</h3><p class="text-gray-600 text-xs mb-4">Authentic Biryani Masala crafted intricately with premium whole spices.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>150 Grams</option></select><span class="font-bold text-base text-crimson">₹199</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 22: Flaxseed Karam Podi -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-crimson mb-1">Flaxseed Karam Podi</h3><p class="text-gray-600 text-xs mb-4">Authentic finely ground Flaxseed spice powder perfect for daily health and taste.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹159</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 23: Kajju Overloaded Sunnunda -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">SWEETS</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Kajju Overloaded Sunnunda</h3><p class="text-gray-600 text-xs mb-4">Authentic traditional Sunnunda, rich in ghee with a **smooth texture and subtle cashew bits**.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹239</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 24: Dry Fruit Laddu -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">SWEETS</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Dry Fruit Laddu</h3><p class="text-gray-600 text-xs mb-4">Nutrition-packed laddus with **pure ghee, honey, and premium almonds, cashews, and pistachios**.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹329</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+            <!-- Card 25: Buffalo Ghee -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between" data-aos="fade-up">
+                <div class="relative"><img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover"><span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">SWEETS</span></div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div><h3 class="font-bold text-lg text-dark-brown mb-1">Buffalo Ghee</h3><p class="text-gray-600 text-xs mb-4">Pure, rich, and aromatic traditional Indian Buffalo Ghee for an authentic taste.</p></div>
+                    <div><div class="flex justify-between items-center mb-4"><select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none"><option>1/4 KG</option></select><span class="font-bold text-base text-crimson">₹249</span></div>
+                    <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-xs flex items-center justify-center space-x-1"><i class="fas fa-plus text-[10px]"></i><span>ADD TO CART</span></button></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-gray-300 pt-16 pb-6 px-6 md:px-12 border-t border-amber-900/20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <div class="flex items-center space-x-2 text-white mb-4">
+                    <i class="fas fa-pepper-hot text-xl text-red-500 transform -rotate-45"></i>
+                    <span class="serif-title text-xl font-bold tracking-wide">Suravi Pickles</span>
+                </div>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">Authentic, homely, trustworthy, and flavorful. Bringing the rich culinary heritage of Andhra straight to your dining table.</p>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#" class="w-9 h-9 rounded-full bg-amber-900/30 flex items-center justify-center hover:bg-crimson hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-amber-900/30 flex items-center justify-center hover:bg-crimson hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="md:pl-12">
+                <h4 class="text-gold font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">All Products</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-gold font-bold mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start space-x-2"><i class="fas fa-user text-gold mt-1 text-xs"></i><span>Name: P. Kavya Sri</span></li>
+                    <li class="flex items-start space-x-2"><i class="fas fa-map-marker-alt text-gold mt-1 text-xs"></i><span>66-3-12, marri chettu centre, ntr circle, patamata, vjw 520010</span></li>
+                    <li class="flex items-start space-x-2"><i class="fas fa-phone-alt text-gold mt-1 text-xs"></i><span>+91 94943 45715</span></li>
+                    <li class="flex items-start space-x-2"><i class="fas fa-envelope text-gold mt-1 text-xs"></i><span>suravipickles@gmail.com</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr class="border-amber-900/30 mb-6">
+
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-2">
+            <p>&copy; 2026 Suravi Pickles. Crafted with love and spice.</p>
+            <p>Website designed by <span class="text-gray-400">@funnel_media</span></p>
+        </div>
+    </footer>
+
+    <!-- Initialize Animations -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html>
