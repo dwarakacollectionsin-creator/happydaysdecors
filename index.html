@@ -1,287 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Days Decors Service - Magical Event Styling</title>
-  
-  <!-- Font Links preserved from the original template -->
-  <link crossorigin href="https://cdnjs.cloudflare.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link rel="stylesheet" href="style.css"> <!-- Replace with your actual stylesheet path -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Days Decors - Taste the Tradition of Celebrations</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Replicating the exact custom color scheme from the original site */
+        :root {
+            --primary-red: #A11E22;
+            --primary-hover: #801417;
+            --bg-light: #FFFBFB;
+            --text-dark: #2D1A1B;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <header>
-    <a href="services.html" title="Book Event Services">
-      <div class="top-banner">
-        <span>SPECIAL OFFER</span>
-        <span>10% OFF ON COMPLIMENTARY PHOTOGRAPHY STAGE</span>
-        <span>Tap to Book</span>
-      </div>
-    </a>
-  </header>
-
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <i></i> Happy Days Decors
-      </a>
-      
-      <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <!-- Booking Cart Counter -->
-      <a href="checkout.html" class="cart-icon">
-        <i></i>
-        <span>0</span>
-      </a>
+    <!-- 1. Top Banner / Announcement Bar -->
+    <div class="bg-[#A11E22] text-white text-center py-2 px-4 text-xs md:text-sm font-semibold tracking-wider flex justify-center items-center gap-2">
+        <span>FREE INITIAL CONSULTATION FOR EVENTS ABOVE ₹19,999</span>
+        <button onclick="scrollToSection('services')" class="bg-white text-[#A11E22] px-3 py-0.5 rounded-full text-[11px] font-bold uppercase hover:bg-gray-100 transition">Tap to Book</button>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <img alt="Magical Happy Days Event Decors" src="images/happy_days_hero.png">
-    <div class="overlay"></div>
-    
-    <div class="hero-content">
-      <div>
-        <span>Design the Tradition</span>
-        <h1>Creating Unforgettable Memories For Your Happy Days</h1>
-        <p>Experience the premium event styling of Andhra with our elegant, vibrant, and perfectly managed custom decorations. Made with passion, precision, and the finest thematic details.</p>
-        <div class="hero-buttons">
-          <a href="services.html" class="btn-primary">Book Now</a>
-          <a href="about.html" class="btn-secondary">Our Story</a>
-        </div>
-      </div>
-    </div>
-  </header>
+    <!-- 2. Header / Navigation Bar -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur shadow-sm z-50 border-b border-red-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo/Brand Name -->
+            <a href="#" class="text-xl md:text-2xl font-black text-[#A11E22] tracking-tight">
+                Happy Days Decors
+            </a>
+            
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-700">
+                <a href="#" class="text-[#A11E22] hover:text-[#801417] transition">Home</a>
+                <a href="#services" class="hover:text-[#A11E22] transition">Services</a>
+                <a href="#about" class="hover:text-[#A11E22] transition">About Us</a>
+                <a href="#contact" class="hover:text-[#A11E22] transition">Contact</a>
+            </nav>
 
-  <!-- Features Icons Section -->
-  <div class="features-bar">
-    <div class="container">
-      <div class="features-grid">
-        <div class="feature-item">
-          <i></i>
-          <span>100% Customized Designs</span>
+            <!-- Cart/Inquiry Icon -->
+            <div class="flex items-center gap-4">
+                <button class="relative bg-red-50 p-2 rounded-full text-[#A11E22] hover:bg-red-100 transition">
+                    <span class="text-xl">📋</span>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-[#A11E22] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
+                </button>
+            </div>
         </div>
-        <div class="feature-item">
-          <i></i>
-          <span>Premium Material & Setup</span>
-        </div>
-        <div class="feature-item">
-          <i></i>
-          <span>Delivered On Time</span>
-        </div>
-        <div class="feature-item">
-          <i></i>
-          <span>Secure Booking Plans</span>
-        </div>
-      </div>
-    </div>
-  </div>
+    </header>
 
-  <!-- Best Sellers / Premium Packages Section -->
-  <section class="products-section">
-    <div class="section-title">
-      <h2>Our Featured Decor Services</h2>
-      <p>Handpicked themes loved and trusted by our clients.</p>
-    </div>
-    
-    <div class="products-grid">
-      
-      <!-- Package 1: Traditional Wedding -->
-      <div class="product-card">
-        <div class="image-wrapper">
-          <div class="badge"><span>Grand</span></div>
-          <img alt="Wedding Decor Theme" loading="lazy" src="images/wedding_decor.png">
-        </div>
-        <div class="card-content">
-          <h3>Traditional Wedding Setup</h3>
-          <p>Pure Indian style **rich floral and royal backdrop** layouts with **custom stage illumination** setups.</p>
-          <div class="pricing-action">
-            <select name="package-tier">
-              <option value="45000">Standard Stage Setup</option>
-              <option value="85000">Premium Floral Backdrop</option>
-              <option value="150000">Grand Royal Wedding Tier</option>
-            </select>
-            <span class="price">₹45,000</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Package 2: Birthday & Theme Parties -->
-      <div class="product-card">
-        <div class="image-wrapper">
-          <div class="badge"><span>Vibrant</span></div>
-          <img alt="Birthday Theme Decor" loading="lazy" src="images/birthday_decor.png">
-        </div>
-        <div class="card-content">
-          <h3>Birthday & Theme Decors</h3>
-          <p>Authentic bespoke birthday event spaces—**pure custom balloon arches and character cutout** styles with **premium neon steps**.</p>
-          <div class="pricing-action">
-            <select name="package-tier">
-              <option value="15000">Basic Balloon Theme</option>
-              <option value="30000">Deluxe Neon Theme</option>
-              <option value="60000">Grand 3D Custom Theme</option>
-            </select>
-            <span class="price">₹15,000</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Package 3: Haldi & Sangeet -->
-      <div class="product-card">
-        <div class="image-wrapper">
-          <div class="badge"><span>Traditional</span></div>
-          <img alt="Haldi Sangeet Decor" loading="lazy" src="images/haldi_decor.png">
-        </div>
-        <div class="card-content">
-          <h3>Haldi & Sangeet Festive Decor</h3>
-          <p>Traditional festive styling, rich in marigold arrangements with **smooth fabric draping and seating steps**.</p>
-          <div class="pricing-action">
-            <select name="package-tier">
-              <option value="20000">Standard Marigold Decor</option>
-              <option value="40000">Premium Swing & Props</option>
-              <option value="75000">Grand Combined Canopy</option>
-            </select>
-            <span class="price">₹20,000</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Package 4: Corporate & Minimalist Events -->
-      <div class="product-card">
-        <div class="image-wrapper">
-          <div class="badge"><span>Sleek</span></div>
-          <img alt="Corporate Events Minimalist Setup" loading="lazy" src="images/corporate_decor.png">
-        </div>
-        <div class="card-content">
-          <h3>Corporate & Elegant Galas</h3>
-          <p>Classic formal or minimalist setup configurations grounded perfectly for formal ceremonies or high-end product launches.</p>
-          <div class="pricing-action">
-            <select name="package-tier">
-              <option value="35000">Standard Media Wall</option>
-              <option value="65000">Premium LED Stage Backdrop</option>
-              <option value="120000">Elite VIP Gala Design</option>
-            </select>
-            <span class="price">₹35,000</span>
-          </div>
-        </div>
-      </div>
+    <!-- 3. Hero Section (Main Banner) -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-red-50/50 to-transparent py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-[#A11E22] font-bold tracking-widest text-xs uppercase bg-red-100/60 px-3 py-1 rounded-full">Taste the Tradition of Events</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                    Authentic Homemade <span class="text-[#A11E22]">Decors</span> Crafted with Love
+                </h1>
+                
+                <!-- Feature Bullet Points -->
+                <div class="grid grid-cols-2 gap-3 text-sm font-medium text-gray-700">
+                    <div class="flex items-center gap-2">✨ 100% Customized</div>
+                    <div class="flex items-center gap-2">🌸 Fresh Flora & Materials</div>
+                    <div class="flex items-center gap-2">🚚 Timely Setup</div>
+                    <div class="flex items-center gap-2">🤝 Transparent Pricing</div>
+                </div>
 
-    </div>
-    
-    <div class="view-all-container">
-      <a href="services.html" class="btn-view-all">View All Decor Concepts</a>
-    </div>
-  </section>
+                <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                    Experience the traditional backdrop designs of South India with our vibrant, elegant, and perfectly structured custom decor packages. Made with passion and the finest materials to make your special moments unforgettable.
+                </p>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
-    <div class="container">
-      <div class="section-title">
-        <h2>What Our Clients Say</h2>
-        <p>Real stories from our happy families and event coordinators.</p>
-      </div>
-      <div class="testimonials-grid">
-        
-        <div class="testimonial-card">
-          <i></i>
-          <div class="stars">
-            <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-          </div>
-          <h3>“Absolutely spectacular!”</h3>
-          <p>“These guys turned our venue into a dreamland! Fresh floral arrangements, perfectly color-coordinated backdrop structures, and complete stress-free execution. Highly recommended!”</p>
-          <div class="client-profile">
-            <img alt="Sri Hari" loading="lazy" src="images/hari.jpeg">
-            <span>Sri Hari</span>
-          </div>
+                <div class="pt-2">
+                    <button onclick="scrollToSection('services')" class="bg-[#A11E22] hover:bg-[#801417] text-white font-bold px-8 py-3.5 rounded-lg shadow-md transition transform active:scale-95">
+                        Book Service Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Image Replacement (Using beautiful Unsplash Event Decor placeholder) -->
+            <div class="relative max-w-md mx-auto md:max-w-none w-full aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1000" alt="Happy Days Traditional Decor Backdrop" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Best Sellers / Premium Services Section -->
+    <section id="services" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-3xl font-black text-gray-900 tracking-tight">Our Best Sellers</h2>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">Handpicked favorites loved by our families.</p>
         </div>
 
-        <div class="testimonial-card">
-          <i></i>
-          <div class="stars">
-            <i>★</i><i>★</i><i>★</i><i>★</i><i>★</i>
-          </div>
-          <h3>“Perfect execution of details”</h3>
-          <p>“I’ve worked with multiple vendors before, but Happy Days Decors truly stands out. Sophisticated premium layouts, highly receptive team, and stunning outputs. It goes perfectly with the grandeur of functions!”</p>
-          <div class="client-profile">
-            <img alt="Geetha" loading="lazy" src="images/geetha.jpeg">
-            <span>Geetha</span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
+        <!-- Product/Service Grid (4 Main Items matching exact design) -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Item 1: Traditional Haldi/Mehendi Decor -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col group hover:shadow-md transition">
+                <div class="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&q=80&w=600" alt="Haldi/Mehendi Setup" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 right-2 bg-yellow-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">Festive</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base">Traditional Haldi Backdrop</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Pure Indian style <b>vibrant yellow and marigold spicy</b> theme with <b>medium-sized setups</b> perfectly staged in your home.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Scale Options</label>
+                            <select class="w-full text-xs border border-gray-200 rounded p-1.5 bg-gray-50 font-medium focus:outline-none focus:border-[#A11E22]">
+                                <option>Home Setup (Compact)</option>
+                                <option>Banquet Hall (Medium)</option>
+                                <option>Grand Lawn (Large)</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <span class="text-lg font-black text-[#A11E22]">₹14,999<span class="text-xs text-gray-400 font-normal"> onwards</span></span>
+                            <button onclick="addToCart()" class="bg-[#A11E22] hover:bg-[#801417] text-white text-xs font-bold px-3 py-2 rounded transition">Add to Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Middle Call-To-Action Banner -->
-  <section class="gift-banner">
-    <div class="banner-overlay"></div>
-    <div class="banner-content">
-      <div>
-        <span>Bespoke Styling Plans</span>
-        <h2>Give the Gift of a Breathtaking Setting</h2>
-        <p>Surprise your family and guests with rich, breathtaking event layouts crafted with premium decorations, modern style trends, and absolute dedication in every corner.</p>
-        <a href="services.html" class="btn-gift">Book a Date</a>
-      </div>
-    </div>
-  </section>
+            <!-- Item 2: Premium Stage Wedding Decor -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col group hover:shadow-md transition">
+                <div class="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=600" alt="Wedding Stage Setup" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 right-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Premium</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base">Grand Wedding Stage</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Authentic traditional wedding stage—<b>pure royal red and gold style</b> with <b>intricate floral hangings</b> and structures.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Scale Options</label>
+                            <select class="w-full text-xs border border-gray-200 rounded p-1.5 bg-gray-50 font-medium focus:outline-none focus:border-[#A11E22]">
+                                <option>Classic Stage Setup</option>
+                                <option>Royal Stage Setup</option>
+                                <option>Imperial Floral Setup</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <span class="text-lg font-black text-[#A11E22]">₹49,999<span class="text-xs text-gray-400 font-normal"> onwards</span></span>
+                            <button onclick="addToCart()" class="bg-[#A11E22] hover:bg-[#801417] text-white text-xs font-bold px-3 py-2 rounded transition">Add to Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-grid">
-        
-        <div class="footer-about">
-          <h3><i></i> Happy Days Decors</h3>
-          <p>Bespoke, timeless, trustworthy, and grand. Bringing the ultimate party styling standards of Andhra straight to your celebrations.</p>
-          <div class="social-icons">
-            <a href="#" rel="noopener noreferrer" target="_blank"><i>IG</i></a>
-            <a href="#" rel="noopener noreferrer" target="_blank"><i>YT</i></a>
-          </div>
-        </div>
-        
-        <div class="footer-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">All Services</a></li>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-contact">
-          <h3>Contact Info</h3>
-          <ul>
-            <li><i></i> Management Coordinator</li>
-            <li><i></i> 66-3-12, Marri Chettu Centre, NTR Circle, Patamata, Vijayawada, Andhra Pradesh, 520010.</li>
-            <li><i></i> <a href="tel:+919494345715">+91 94943 45715</a></li>
-            <li><i></i> <a href="mailto:happydaysdecors@gmail.com">happydaysdecors@gmail.com</a></li>
-          </ul>
-        </div>
-        
-      </div>
-      
-      <div class="footer-bottom">
-        <p>© 2026 Happy Days Decors Service. All Rights Reserved. Crafted with passion and elegance.</p>
-        <p>Website designed by <a href="https://www.instagram.com/funniii_media" rel="noopener noreferrer" target="_blank">@funniii_media</a></p>
-      </div>
-    </div>
-  </footer>
+            <!-- Item 3: Birthday & Cradle Ceremony Decor -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col group hover:shadow-md transition">
+                <div class="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=600" alt="Birthday/Cradle Decor" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 right-2 bg-blue-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">Joyful</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base">Cradle & Birthday Themes</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Authentic elegant designs, rich with organic pastel balloons or flowers with a <b>smooth texture and custom naming backdrop</b>.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Scale Options</label>
+                            <select class="w-full text-xs border border-gray-200 rounded p-1.5 bg-gray-50 font-medium focus:outline-none focus:border-[#A11E22]">
+                                <option>Standard Theme Setup</option>
+                                <option>Premium Backdrop Setup</option>
+                                <option>Luxury Balloon/Flora Mix</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <span class="text-lg font-black text-[#A11E22]">₹11,999<span class="text-xs text-gray-400 font-normal"> onwards</span></span>
+                            <button onclick="addToCart()" class="bg-[#A11E22] hover:bg-[#801417] text-white text-xs font-bold px-3 py-2 rounded transition">Add to Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Fixed WhatsApp Widget for quick bookings -->
-  <a href="https://wa.me/919494345715" class="whatsapp-widget" target="_blank" title="Chat on WhatsApp">
-    <i>WhatsApp Us</i>
-  </a>
+            <!-- Item 4: Festive Home & Pooja Decors -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col group hover:shadow-md transition">
+                <div class="aspect-square w-full overflow-hidden bg-gray-100 relative">
+                    <img src="https://images.unsplash.com/photo-1561372333-5184da7b57ce?auto=format&fit=crop&q=80&w=600" alt="Pooja/Festive Setup" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <span class="absolute top-2 right-2 bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded">Divine</span>
+                </div>
+                <div class="p-4 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-base">Festive Pooja Backdrops</h3>
+                        <p class="text-xs text-gray-500 mt-1 line-clamp-2">Classic traditional homemade design arrangements ground perfectly for Satyanarayana Vratam, Varalakshmi Pooja, or festivals.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex flex-col gap-1">
+                            <label class="text-[10px] font-bold uppercase tracking-wider text-gray-400">Scale Options</label>
+                            <select class="w-full text-xs border border-gray-200 rounded p-1.5 bg-gray-50 font-medium focus:outline-none focus:border-[#A11E22]">
+                                <option>Basic Pooja Frame</option>
+                                <option>Traditional Flower Arch</option>
+                                <option>Complete Home Overlay</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center justify-between pt-1">
+                            <span class="text-lg font-black text-[#A11E22]">₹8,999<span class="text-xs text-gray-400 font-normal"> onwards</span></span>
+                            <button onclick="addToCart()" class="bg-[#A11E22] hover:bg-[#801417] text-white text-xs font-bold px-3 py-2 rounded transition">Add to Request</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="border border-[#A11E22] text-[#A11E22] hover:bg-red-50 font-bold text-sm px-6 py-2.5 rounded-lg transition">
+                View All Design Themes
+            </button>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials Section -->
+    <section class="bg-red-50/40 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">What Our Families Say</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-3">
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic">“Absolutely beautiful! Perfect balance of tradition and modernity.”</p>
+                    <p class="font-bold text-xs text-gray-950">- Geetha</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-3">
+                    <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                    <p class="text-gray-600 text-sm italic">“Feels like home in every celebration. The decoration standard is amazing and you can really see the effort in natural floral installations. Highly recommended.”</p>
+                    <p class="font-bold text-xs text-gray-950">- Phani</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Middle Banner Call-To-Action -->
+    <section class="bg-[#A11E22] text-white py-12 text-center px-4">
+        <div class="max-w-2xl mx-auto space-y-4">
+            <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">Custom Event Management. Give the Gift of Beautiful Memories.</h2>
+            <button onclick="scrollToSection('contact')" class="bg-white text-[#A11E22] font-bold text-xs uppercase px-5 py-2.5 rounded shadow hover:bg-gray-100 transition">Get Custom Quote</button>
+        </div>
+    </section>
+
+    <!-- 7. Footer & Contact Section -->
+    <footer id="contact" class="bg-gray-950 text-gray-400 pt-16 pb-8 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-gray-900">
+            
+            <div class="space-y-4" id="about">
+                <h3 class="text-white font-bold text-lg">Happy Days Decors</h3>
+                <p class="text-sm leading-relaxed text-gray-500">Bringing families together with authentic custom backdrops, vibrant setups, and seamless execution. Crafted with love and grand celebratory aesthetics.</p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#services" class="hover:text-white transition">All Decor Packages</a></li>
+                    <li><a href="#about" class="hover:text-white transition">Our Story</a></li>
+                    <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="text-white text-sm font-semibold uppercase tracking-wider">Contact Details</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li class="text-white font-medium">Organizer: <span class="text-gray-400 font-normal">P. Kavya Sri</span></li>
+                    <li>📞 Phone: <a href="tel:+919494345715" class="hover:text-white transition">+91 94943 45715</a></li>
+                    <li>✉️ Email: <a href="mailto:happydaysdecors@gmail.com" class="hover:text-white transition">happydaysdecors@gmail.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs gap-4 text-gray-600">
+            <p>© 2026 Happy Days Decors. All Rights Reserved. Crafted with love and celebration.</p>
+            <p>Website designed by <a href="#" class="text-gray-500 hover:text-gray-400">@funniii_media</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive script to replicate the exact actions -->
+    <script>
+        let count = 0;
+        function addToCart() {
+            count++;
+            document.getElementById('cart-count').innerText = count;
+            alert('Item added to your Event Decor Service Request List!');
+        }
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+</script>
 </body>
 </html>
