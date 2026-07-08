@@ -22,38 +22,38 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FAF8F5;
+            background-color: #FDFBF9;
         }
         .serif-title {
             font-family: 'Playfair Display', serif;
         }
         .bg-dark-brown {
-            background-color: #231912;
+            background-color: #2D1B18;
         }
         .text-gold {
-            color: #E29543;
+            color: #E5A97D;
         }
         .bg-gold {
             background-color: #FBBF24;
         }
         .bg-crimson {
-            background-color: #C82323;
+            background-color: #DB5A6B;
         }
         .border-crimson {
-            border-color: #C82323;
+            border-color: #DB5A6B;
         }
         .text-crimson {
-            color: #C82323;
+            color: #DB5A6B;
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #231912;
+            background: #2D1B18;
         }
         ::-webkit-scrollbar-thumb {
-            background: #C82323;
+            background: #DB5A6B;
             border-radius: 4px;
         }
 
@@ -62,7 +62,7 @@
             width: 100%;
             min-height: 100vh;
             background-image:
-                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+                linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.60)),
                 url("images/hero-bg.webp"); /* Your background image */
             background-size: cover;
             background-position: center center;
@@ -78,10 +78,10 @@
             inset: 0;
             background:
                 radial-gradient(circle at top right,
-                    rgba(255,193,7,.15),
+                    rgba(219,90,107,.15),
                     transparent 45%),
                 radial-gradient(circle at bottom left,
-                    rgba(255,193,7,.08),
+                    rgba(229,169,125,.10),
                     transparent 40%);
             pointer-events: none;
         }
@@ -130,8 +130,8 @@
     <!-- Navbar -->
     <nav class="bg-dark-brown text-white py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-40 shadow-md">
         <div class="flex items-center space-x-2">
-            <i class="fas fa-pepper-hot text-2xl text-red-500 transform -rotate-45"></i>
-            <span class="serif-title text-xl md:text-2xl font-bold tracking-wide">Suravi Pickles</span>
+            <i class="fas fa-gift text-2xl text-rose-400"></i>
+            <span class="serif-title text-xl md:text-2xl font-bold tracking-wide">Happy Days Decors</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium text-sm tracking-wide items-center">
             <a href="#" class="text-gold border-b-2 border-gold pb-1">Home</a>
@@ -142,7 +142,7 @@
         </div>
         <div class="flex items-center space-x-4">
             <button class="relative hover:text-gold transition-colors">
-                <i class="fas fa-shopping-cart text-xl"></i>
+                <i class="fas fa-calendar-check text-xl"></i>
                 <span class="absolute -top-2 -right-2 bg-crimson text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">0</span>
             </button>
             <button class="md:hidden text-white focus:outline-none">
@@ -156,9 +156,9 @@
         <!-- Extra dark overlay layer -->
         <div class="hero-overlay"></div>
 
-        <!-- Floating Free Delivery Tag -->
+        <!-- Floating Price Tag -->
         <div class="absolute top-10 right-6 md:right-16 bg-[#FFB703] text-dark-brown px-4 py-3 rounded-lg font-bold text-center shadow-lg transform rotate-6 animate-bounce text-xs md:text-sm z-10 max-w-[140px]">
-            <i class="fas fa-truck mr-1"></i> Our Decoration Starts With ₹699 <br><span class="text-[10px] font-normal">Book Now</span>
+            <i class="fas fa-star mr-1"></i> Decors Start With ₹699 <br><span class="text-[10px] font-normal">Book Now</span>
         </div>
 
         <div class="container mx-auto px-6 md:px-12 text-white relative z-10" data-aos="fade-right" data-aos-duration="1000">
@@ -170,7 +170,7 @@
                 Experience the traditional charm of festive celebrations with our vibrant, handcrafted, and perfectly designed home decor collections. Made with love and the finest materials.
             </p>
             <div class="flex flex-wrap gap-4">
-                <button class="bg-crimson hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold tracking-wide shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                <button class="bg-crimson hover:bg-rose-600 text-white px-8 py-3 rounded-md font-semibold tracking-wide shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
                     BOOK NOW 
                 </button>
                 <button class="border-2 border-white hover:bg-white hover:text-dark-brown text-white px-8 py-3 rounded-md font-semibold tracking-wide transition-all duration-300">
@@ -183,10 +183,10 @@
     <!-- Features Bar -->
     <section class="bg-[#FFB703] py-4 px-6">
         <div class="container mx-auto flex flex-wrap justify-around items-center text-dark-brown font-bold text-xs md:text-sm gap-4">
-            <div class="flex items-center space-x-2"><i class="fas fa-leaf text-lg"></i> <span>100% HANDCRAFTED</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-pump-medical text-lg"></i> <span>PREMIUM QUALITY</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-shipping-fast text-lg"></i> <span>DELIVERED WITH CARE</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-shield-alt text-lg"></i> <span>SECURE PAYMENT</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-magic text-lg"></i> <span>100% HANDCRAFTED</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-crown text-lg"></i> <span>PREMIUM QUALITY</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-clock text-lg"></i> <span>SETUP ON TIME</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-smile text-lg"></i> <span>HASSLE-FREE BOOKING</span></div>
         </div>
     </section>
 
@@ -194,36 +194,32 @@
     <section class="py-16 px-6 md:px-12 container mx-auto">
         <div class="text-center mb-12" data-aos="fade-up">
             <h2 class="serif-title text-3xl md:text-4xl font-bold text-crimson mb-2 relative inline-block">
-                Our Best Service 
+                Our Best Services 
                 <span class="absolute left-1/4 right-1/4 bottom-0 h-0.5 bg-[#FFB703]"></span>
             </h2>
-            <p class="text-gray-600 text-sm mt-2">Handpicked favorites loved by our decorators.</p>
+            <p class="text-gray-600 text-sm mt-2">Handpicked favorite setups loved by our customers.</p>
         </div>
 
-        <!-- Products Grid -->
+        <!-- Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <!-- Card 1 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" alt="Mango Pickle" class="w-full h-64 object-cover">
-                    <span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span>
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=600" alt="Birthday Decor" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-pink-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">POPULAR</span>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="font-bold text-xl text-dark-brown mb-2">Mango Pickle</h3>
-                        <p class="text-gray-600 text-sm mb-4">Pure Indian style <strong>thick red and spicy</strong> Avakaya with <strong>medium-sized pieces</strong> in a glass jar.</p>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Grand Birthday Theme</h3>
+                        <p class="text-gray-600 text-sm mb-4">Premium balloon archways mixed with custom metallic backdrops and LED lights tailored for stunning portrait photos.</p>
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-4">
-                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
-                                <option>1/4 KG</option>
-                                <option>1/2 KG</option>
-                                <option>1 KG</option>
-                            </select>
-                            <span class="font-bold text-lg text-crimson">₹169</span>
+                            <span class="text-xs text-gray-500 font-medium">Standard Setup</span>
+                            <span class="font-bold text-lg text-crimson">From ₹2,499</span>
                         </div>
-                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
-                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        <button class="w-full bg-crimson hover:bg-rose-600 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-calendar-alt text-xs"></i> <span>CHECK AVAILABILITY</span>
                         </button>
                     </div>
                 </div>
@@ -232,25 +228,21 @@
             <!-- Card 2 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600" alt="Chicken Pickle" class="w-full h-64 object-cover">
-                    <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span>
+                    <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&q=80&w=600" alt="Baby Shower Decor" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">PREMIUM</span>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="font-bold text-xl text-dark-brown mb-2">Chicken Pickle</h3>
-                        <p class="text-gray-600 text-sm mb-4">Authentic homemade Chicken Pickle—<strong>pure Indian red spicy</strong> style with <strong>small pieces</strong>.</p>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Baby Shower Special</h3>
+                        <p class="text-gray-600 text-sm mb-4">Elegant pastel balloon arrangements featuring custom name boards, floral borders, and charming cloud cutouts.</p>
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-4">
-                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
-                                <option>1/4 KG</option>
-                                <option>1/2 KG</option>
-                                <option>1 KG</option>
-                            </select>
-                            <span class="font-bold text-lg text-crimson">₹289</span>
+                            <span class="text-xs text-gray-500 font-medium">Deluxe Setup</span>
+                            <span class="font-bold text-lg text-crimson">From ₹3,999</span>
                         </div>
-                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
-                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        <button class="w-full bg-crimson hover:bg-rose-600 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-calendar-alt text-xs"></i> <span>CHECK AVAILABILITY</span>
                         </button>
                     </div>
                 </div>
@@ -259,52 +251,21 @@
             <!-- Card 3 -->
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=600" alt="Kajju Sunnunda" class="w-full h-64 object-cover">
-                    <span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">SWEETS</span>
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&q=80&w=600" alt="Anniversary Setup" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-rose-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">ROMANTIC</span>
                 </div>
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="font-bold text-xl text-dark-brown mb-2">Kajju Sunnunda</h3>
-                        <p class="text-gray-600 text-sm mb-4">Authentic traditional Sunnunda, rich in ghee with a <strong>smooth texture and cashew bits</strong>.</p>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Anniversary Canopy</h3>
+                        <p class="text-gray-600 text-sm mb-4">A romantic, fairy-lit white net canopy setting elevated with heart-shaped chrome balloon bouquets.</p>
                     </div>
                     <div>
                         <div class="flex justify-between items-center mb-4">
-                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
-                                <option>1/4 KG</option>
-                                <option>1/2 KG</option>
-                                <option>1 KG</option>
-                            </select>
-                            <span class="font-bold text-lg text-crimson">₹239</span>
+                            <span class="text-xs text-gray-500 font-medium">Cozy Setup</span>
+                            <span class="font-bold text-lg text-crimson">From ₹1,899</span>
                         </div>
-                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
-                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 Below -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="400">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" alt="Nallakaram" class="w-full h-64 object-cover">
-                    <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span>
-                </div>
-                <div class="p-6 flex-grow flex flex-col justify-between">
-                    <div>
-                        <h3 class="font-bold text-xl text-dark-brown mb-2">Nallakaram</h3>
-                        <p class="text-gray-600 text-sm mb-4">Classic traditional homemade Nallakaram ground perfectly for idly or dosa.</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
-                                <option>1/4 KG</option>
-                                <option>1/2 KG</option>
-                                <option>1 KG</option>
-                            </select>
-                            <span class="font-bold text-lg text-crimson">₹159</span>
-                        </div>
-                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
-                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        <button class="w-full bg-crimson hover:bg-rose-600 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-calendar-alt text-xs"></i> <span>CHECK AVAILABILITY</span>
                         </button>
                     </div>
                 </div>
@@ -313,20 +274,20 @@
 
         <div class="text-center mt-12">
             <button class="border-2 border-crimson text-crimson hover:bg-crimson hover:text-white px-8 py-2.5 rounded-md font-bold tracking-wide transition-all duration-300">
-                VIEW ALL FLAVORS
+                VIEW ALL DESIGNS
             </button>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-[#F5EFE6] py-16 px-6 md:px-12">
+    <section class="bg-[#F9F1EE] py-16 px-6 md:px-12">
         <div class="container mx-auto">
             <div class="text-center mb-12" data-aos="fade-up">
                 <h2 class="serif-title text-3xl md:text-4xl font-bold text-crimson mb-2 relative inline-block">
-                    What Our Customers Say
+                    What Our Clients Say
                     <span class="absolute left-1/4 right-1/4 bottom-0 h-0.5 bg-[#FFB703]"></span>
                 </h2>
-                <p class="text-gray-600 text-sm mt-2">Real stories from our pickle-loving community.</p>
+                <p class="text-gray-600 text-sm mt-2">Real feedback from beautiful celebrations we've styled.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -337,12 +298,12 @@
                         <div class="flex text-[#FFB703] space-x-1 mb-2">
                             <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Absolutely delicious!"</h4>
-                        <p class="text-gray-600 text-sm italic mb-6">"These pickles remind me of homemade flavors from my childhood. Fresh, perfectly spiced, and full of authentic Andhra taste. Highly recommended!"</p>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Absolutely gorgeous setup!"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"The balloon colors matched our theme perfectly. They arrived exactly on time and finished the setup in less than an hour. Everyone loved the pictures!"</p>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Sri Hari" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Client Portrait" class="w-full h-full object-cover">
                         </div>
                         <span class="font-bold text-sm text-crimson">Sri Hari</span>
                     </div>
@@ -355,12 +316,12 @@
                         <div class="flex text-[#FFB703] space-x-1 mb-2">
                             <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Perfect balance of taste"</h4>
-                        <p class="text-gray-600 text-sm italic mb-6">"I've tried many brands, but these pickles truly stand out. Rich flavor, not too oily, and very fresh. Goes perfectly with every meal!"</p>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Stress-free booking"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"I requested a last-minute change to the backdrop, and the team handled it effortlessly. Professional service and great attention to detail."</p>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Geetha" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Client Portrait" class="w-full h-full object-cover">
                         </div>
                         <span class="font-bold text-sm text-crimson">Geetha</span>
                     </div>
@@ -373,12 +334,12 @@
                         <div class="flex text-[#FFB703] space-x-1 mb-2">
                             <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
                         </div>
-                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Feels like home in every bite"</h4>
-                        <p class="text-gray-600 text-sm italic mb-6">"The quality is amazing and you can really taste the natural ingredients. It feels like homemade pickles prepared with love."</p>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Exceptional quality"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"The balloons stayed completely inflated and shiny for two full days after the party. Exceptional materials used, highly worth the price."</p>
                     </div>
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="Phani" class="w-full h-full object-cover">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="Client Portrait" class="w-full h-full object-cover">
                         </div>
                         <span class="font-bold text-sm text-crimson">Phani</span>
                     </div>
