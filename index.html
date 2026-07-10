@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Days Decors - Authentic Balloon & Event Decors</title>
+    <title>Happy Days Decors - Authentic Balloon Decors</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display & Inter -->
@@ -17,362 +17,389 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0B0B0B;
-            color: #F5F5F5;
+            background-color: #FAF8F5;
         }
         .serif-title {
             font-family: 'Playfair Display', serif;
         }
-        .bg-dark-luxury {
-            background-color: #121212;
+        .bg-dark-brown {
+            background-color: #231912;
         }
         .text-gold {
-            color: #C5A880;
+            color: #E29543;
         }
         .bg-gold {
-            background-color: #C5A880;
+            background-color: #FBBF24;
         }
-        .hover-bg-gold:hover {
-            background-color: #E2C799;
+        .bg-crimson {
+            background-color: #C82323;
         }
-        .border-gold {
-            border-color: #C5A880;
+        .border-crimson {
+            border-color: #C82323;
         }
-        
-        /* Custom Premium Scrollbar */
+        .text-crimson {
+            color: #C82323;
+        }
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0B0B0B;
+            background: #231912;
         }
         ::-webkit-scrollbar-thumb {
-            background: #C5A880;
+            background: #C82323;
             border-radius: 4px;
-        }
-
-        /* Floating Message Bubble Animation Keyframes */
-        @keyframes floatingBubble {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-        }
-        .animated-promo-bubble {
-            animation: floatingBubble 3s ease-in-out infinite, pulseGlow 2s infinite;
-        }
-        .animated-promo-bubble::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            right: 24px;
-            border-width: 8px 8px 0;
-            border-style: solid;
-            border-color: #FFFFFF transparent;
-            display: block;
-            width: 0;
         }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
-    <!-- FLOATING INTERACTION LAYER -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
-        <!-- Attention Grabbing Message Bubble -->
-        <a href="https://wa.me/919908180194" target="_blank" class="animated-promo-bubble relative bg-white text-black font-bold text-xs md:text-sm px-4 py-3 rounded-full shadow-2xl tracking-wide whitespace-nowrap border border-[#C5A880]">
-            ✨ Starting from just ₹599 only
-        </a>
-        <!-- WhatsApp Base Action Trigger -->
-        <a href="https://wa.me/919908180194" target="_blank" class="bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
-            <i class="fab fa-whatsapp text-3xl"></i>
-        </a>
-    </div>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/#" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
-    <!-- Header Navigation -->
-    <nav class="bg-[#0B0B0B] text-white py-5 px-6 md:px-12 flex justify-between items-center sticky top-0 z-40 border-b border-amber-900/20 shadow-xl">
+    <!-- Navbar -->
+    <nav class="bg-dark-brown text-white py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 z-40 shadow-md">
         <div class="flex items-center space-x-2">
-            <span class="serif-title text-xl md:text-2xl font-bold tracking-wide text-gold">Happy Days Decors</span>
+            <i class="fas fa-pepper-hot text-2xl text-red-500 transform -rotate-45"></i>
+            <span class="serif-title text-xl md:text-2xl font-bold tracking-wide">Suravi Pickles</span>
         </div>
         <div class="hidden md:flex space-x-8 font-medium text-sm tracking-wide items-center">
             <a href="#" class="text-gold border-b-2 border-gold pb-1">Home</a>
-            <a href="#services" class="hover:text-gold transition-colors">Services</a>
-            <a href="#gallery" class="hover:text-gold transition-colors">Gallery</a>
-            <a href="#packages" class="hover:text-gold transition-colors">Packages</a>
-            <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+            <a href="#" class="hover:text-gold transition-colors">Services</a>
+            <a href="#" class="hover:text-gold transition-colors">Gallery</a>
+            <a href="#" class="hover:text-gold transition-colors">About Us</a>
+            <a href="#" class="hover:text-gold transition-colors">Contact</a>
         </div>
-        <div class="flex items-center">
-            <a href="#packages" class="hidden md:inline-block bg-gold hover-bg-gold text-black font-bold text-xs px-5 py-2.5 rounded-none tracking-wider transition-colors">
-                VIEW PACKAGES
-            </a>
-            <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none text-xl">
-                <i class="fas fa-bars"></i>
+        <div class="flex items-center space-x-4">
+            <button class="relative hover:text-gold transition-colors">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="absolute -top-2 -right-2 bg-crimson text-white rounded-full text-xs w-4 h-4 flex items-center justify-center">0</span>
+            </button>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Mobile Navigation Drawer Overlay -->
-    <div id="mobileMenu" class="hidden fixed inset-0 top-[65px] bg-[#0B0B0B] z-30 flex-col px-6 py-8 space-y-6 text-lg border-t border-amber-900/10">
-        <a href="#" class="text-gold font-medium">Home</a>
-        <a href="#services" class="text-gray-300 hover:text-gold">Services</a>
-        <a href="#gallery" class="text-gray-300 hover:text-gold">Gallery</a>
-        <a href="#packages" class="text-gray-300 hover:text-gold">Packages</a>
-        <a href="#contact" class="text-gray-300 hover:text-gold">Contact</a>
-    </div>
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] bg-cover bg-center flex items-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&q=80&w=1600');">
+        <!-- Floating Free Delivery Tag -->
+        <div class="absolute top-10 right-6 md:right-16 bg-[#FFB703] text-dark-brown px-4 py-3 rounded-lg font-bold text-center shadow-lg transform rotate-6 animate-bounce text-xs md:text-sm z-10 max-w-[140px]">
+            <i class="fas fa-truck mr-1"></i> Our Decoration Starts With ₹699 <br><span class="text-[10px] font-normal">Book Now</span>
+        </div>
 
-    <!-- Hero Showcase Section with Updated Customized Background Image -->
-    <section class="relative h-[85vh] bg-cover bg-center flex items-center" style="background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1707150117070-13e2f4bb6c90?q=80&w=1600&auto=format&fit=crop');">
         <div class="container mx-auto px-6 md:px-12 text-white" data-aos="fade-right" data-aos-duration="1000">
-            <p class="text-gold font-bold tracking-widest text-xs md:text-sm mb-3 uppercase">Style The Celebration</p>
-            <h1 class="serif-title text-4xl md:text-6xl font-bold leading-tight max-w-3xl mb-6">
-                Making Every Small Celebration Beautiful & Memorable
+            <p class="text-gold font-bold tracking-widest text-xs md:text-sm mb-3 uppercase">STYLE THE CELEBRATION</p>
+            <h1 class="serif-title text-4xl md:text-6xl font-bold leading-tight max-w-2xl mb-6">
+                Authentic Crafted Decoration Vibes
             </h1>
-            <p class="text-gray-400 text-sm md:text-lg max-w-2xl mb-8 leading-relaxed font-light">
-                Affordable decoration services for birthdays, baby showers, engagements, naming ceremonies, anniversaries, housewarming, festive decorations, and other special occasions.
+            <p class="text-gray-300 text-sm md:text-lg max-w-xl mb-8 leading-relaxed">
+                Experience the traditional charm of festive celebrations with our vibrant, handcrafted, and perfectly designed home decor collections. Made with love and the finest materials.
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="#gallery" class="bg-gold hover-bg-gold text-black px-8 py-3.5 font-bold tracking-wide shadow-md transition-all duration-300 transform hover:-translate-y-0.5 text-center w-full sm:w-auto">
-                    EXPLORE GALLERY
-                </a>
-                <a href="#packages" class="border-2 border-white hover:border-gold hover:text-gold text-white px-8 py-3.5 font-bold tracking-wide transition-all duration-300 text-center w-full sm:w-auto">
-                    VIEW PACKAGES
-                </a>
+                <button class="bg-crimson hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold tracking-wide shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+                    BOOK NOW 
+                </button>
+                <button class="border-2 border-white hover:bg-white hover:text-dark-brown text-white px-8 py-3 rounded-md font-semibold tracking-wide transition-all duration-300">
+                    VIEW GALLERY
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Features Dynamic Ribbon -->
-    <section class="bg-gold py-5 px-6">
-        <div class="container mx-auto flex flex-wrap justify-around items-center text-black font-bold text-xs md:text-sm gap-4 tracking-wider">
-            <div class="flex items-center space-x-2"><i class="fas fa-tags text-lg"></i> <span>STARTING AT ₹599</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-lightbulb text-lg"></i> <span>CREATIVE BALLOON DESIGNS</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-gem text-lg"></i> <span>PREMIUM MATERIALS</span></div>
-            <div class="flex items-center space-x-2"><i class="fas fa-clock text-lg"></i> <span>ON-TIME TIMINGS</span></div>
+    <!-- Features Bar -->
+    <section class="bg-[#FFB703] py-4 px-6">
+        <div class="container mx-auto flex flex-wrap justify-around items-center text-dark-brown font-bold text-xs md:text-sm gap-4">
+            <div class="flex items-center space-x-2"><i class="fas fa-leaf text-lg"></i> <span>100% HANDCRAFTED</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-pump-medical text-lg"></i> <span>PREMIUM QUALITY</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-shipping-fast text-lg"></i> <span>DELIVERED WITH CARE</span></div>
+            <div class="flex items-center space-x-2"><i class="fas fa-shield-alt text-lg"></i> <span>SECURE PAYMENT</span></div>
         </div>
     </section>
 
-    <!-- Premium Services Focus Grid -->
-    <section id="services" class="py-20 px-6 md:px-12 container mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="serif-title text-3xl md:text-4xl font-bold text-white mb-2 relative inline-block">
-                Our Available Services 
-                <span class="absolute left-1/4 right-1/4 bottom-0 h-[1px] bg-gold"></span>
+    <!-- Best Services Section -->
+    <section class="py-16 px-6 md:px-12 container mx-auto">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="serif-title text-3xl md:text-4xl font-bold text-crimson mb-2 relative inline-block">
+                Our Best Service 
+                <span class="absolute left-1/4 right-1/4 bottom-0 h-0.5 bg-[#FFB703]"></span>
             </h2>
-            <p class="text-gray-400 text-sm mt-3 font-light">Handcrafted thematic executions perfect for micro-celebrations.</p>
+            <p class="text-gray-600 text-sm mt-2">Handpicked favorites loved by our decorators.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="50">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-birthday-cake"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Birthday Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Vibrant setups perfect for children and milestone generational birthdays.</p>
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="100">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&q=80&w=600" alt="Mango Pickle" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">VEG</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Mango Pickle</h3>
+                        <p class="text-gray-600 text-sm mb-4">Pure Indian style <strong>thick red and spicy</strong> Avakaya with <strong>medium-sized pieces</strong> in a glass jar.</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
+                                <option>1/4 KG</option>
+                                <option>1/2 KG</option>
+                                <option>1 KG</option>
+                            </select>
+                            <span class="font-bold text-lg text-crimson">₹169</span>
+                        </div>
+                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="100">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-baby"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Baby Shower Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Elegant arrangements welcoming parenthood chapters beautifully.</p>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="200">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600" alt="Chicken Pickle" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">NON-VEG</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Chicken Pickle</h3>
+                        <p class="text-gray-600 text-sm mb-4">Authentic homemade Chicken Pickle—<strong>pure Indian red spicy</strong> style with <strong>small pieces</strong>.</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
+                                <option>1/4 KG</option>
+                                <option>1/2 KG</option>
+                                <option>1 KG</option>
+                            </select>
+                            <span class="font-bold text-lg text-crimson">₹289</span>
+                        </div>
+                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="150">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-id-card-alt"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Naming Ceremony Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Traditional backgrounds prioritizing pure auspicious aesthetics.</p>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="300">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&q=80&w=600" alt="Kajju Sunnunda" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-[#FFB703] text-dark-brown text-[10px] font-bold px-2 py-0.5 rounded">SWEETS</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Kajju Sunnunda</h3>
+                        <p class="text-gray-600 text-sm mb-4">Authentic traditional Sunnunda, rich in ghee with a <strong>smooth texture and cashew bits</strong>.</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
+                                <option>1/4 KG</option>
+                                <option>1/2 KG</option>
+                                <option>1 KG</option>
+                            </select>
+                            <span class="font-bold text-lg text-crimson">₹239</span>
+                        </div>
+                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="200">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-ring"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Engagement Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Premium thematic structures highlighting your special proposal stage.</p>
+
+            <!-- Card 4 Below -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col justify-between" data-aos="zoom-in" data-aos-delay="400">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" alt="Nallakaram" class="w-full h-64 object-cover">
+                    <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2 py-0.5 rounded">POWDER</span>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-xl text-dark-brown mb-2">Nallakaram</h3>
+                        <p class="text-gray-600 text-sm mb-4">Classic traditional homemade Nallakaram ground perfectly for idly or dosa.</p>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <select class="border border-gray-300 rounded px-2 py-1 text-xs bg-gray-50 focus:outline-none">
+                                <option>1/4 KG</option>
+                                <option>1/2 KG</option>
+                                <option>1 KG</option>
+                            </select>
+                            <span class="font-bold text-lg text-crimson">₹159</span>
+                        </div>
+                        <button class="w-full bg-crimson hover:bg-red-700 text-white py-2 rounded font-semibold text-sm tracking-wide transition-colors flex items-center justify-center space-x-2">
+                            <i class="fas fa-plus text-xs"></i> <span>ADD TO CART</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="250">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-heart"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Anniversary Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Romantic designs celebrating timeline landmarks gracefully.</p>
-            </div>
-            <div class="bg-dark-luxury p-8 border border-amber-900/10 hover:border-gold/30 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="300">
-                <div class="text-gold text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-home"></i></div>
-                <h3 class="font-bold text-lg text-white mb-2">Housewarming Decorations</h3>
-                <p class="text-gray-400 text-xs font-light">Festive traditional values mapped for your elegant new spaces.</p>
-            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button class="border-2 border-crimson text-crimson hover:bg-crimson hover:text-white px-8 py-2.5 rounded-md font-bold tracking-wide transition-all duration-300">
+                VIEW ALL FLAVORS
+            </button>
         </div>
     </section>
 
-    <!-- Curated Gallery Grid Section -->
-    <section id="gallery" class="bg-[#121212] py-20 px-6 md:px-12">
+    <!-- Testimonials Section -->
+    <section class="bg-[#F5EFE6] py-16 px-6 md:px-12">
         <div class="container mx-auto">
             <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="serif-title text-3xl md:text-4xl font-bold text-white mb-2 relative inline-block">
-                    Inspirational Portfolio Gallery
-                    <span class="absolute left-1/4 right-1/4 bottom-0 h-[1px] bg-gold"></span>
+                <h2 class="serif-title text-3xl md:text-4xl font-bold text-crimson mb-2 relative inline-block">
+                    What Our Customers Say
+                    <span class="absolute left-1/4 right-1/4 bottom-0 h-0.5 bg-[#FFB703]"></span>
                 </h2>
+                <p class="text-gray-600 text-sm mt-2">Real stories from our pickle-loving community.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="relative overflow-hidden group aspect-[4/5]" data-aos="fade-up" data-aos-delay="50">
-                    <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&q=80&w=600" alt="Birthdays Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/60 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-gold font-bold text-sm tracking-widest">BIRTHDAYS</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="text-[#FFB703] mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                        <div class="flex text-[#FFB703] space-x-1 mb-2">
+                            <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Absolutely delicious!"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"These pickles remind me of homemade flavors from my childhood. Fresh, perfectly spiced, and full of authentic Andhra taste. Highly recommended!"</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Sri Hari" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-bold text-sm text-crimson">Sri Hari</span>
                     </div>
                 </div>
-                <div class="relative overflow-hidden group aspect-[4/5]" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Baby Showers Setup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/60 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-gold font-bold text-sm tracking-widest">BABY SHOWERS</span>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="text-[#FFB703] mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                        <div class="flex text-[#FFB703] space-x-1 mb-2">
+                            <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Perfect balance of taste"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"I've tried many brands, but these pickles truly stand out. Rich flavor, not too oily, and very fresh. Goes perfectly with every meal!"</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100" alt="Geetha" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-bold text-sm text-crimson">Geetha</span>
                     </div>
                 </div>
-                <div class="relative overflow-hidden group aspect-[4/5]" data-aos="fade-up" data-aos-delay="150">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600" alt="Engagements Backdrop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/60 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-gold font-bold text-sm tracking-widest">ENGAGEMENTS</span>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="text-[#FFB703] mb-4 text-2xl"><i class="fas fa-quote-left"></i></div>
+                        <div class="flex text-[#FFB703] space-x-1 mb-2">
+                            <i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i><i class="fas fa-star text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-lg text-dark-brown mb-2">"Feels like home in every bite"</h4>
+                        <p class="text-gray-600 text-sm italic mb-6">"The quality is amazing and you can really taste the natural ingredients. It feels like homemade pickles prepared with love."</p>
                     </div>
-                </div>
-                <div class="relative overflow-hidden group aspect-[4/5]" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&q=80&w=600" alt="Balloons Assembly" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/60 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span class="text-gold font-bold text-sm tracking-widest">BALLOON STRUCTURES</span>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="Phani" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-bold text-sm text-crimson">Phani</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Packages Grid Layout -->
-    <section id="packages" class="py-20 px-6 md:px-12 container mx-auto">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="serif-title text-3xl md:text-4xl font-bold text-white mb-2 relative inline-block">
-                Transparent Packages
-                <span class="absolute left-1/4 right-1/4 bottom-0 h-[1px] bg-gold"></span>
-            </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-            <div class="bg-dark-luxury p-6 border border-amber-900/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-1">Starter Package</h3>
-                    <p class="text-2xl font-bold text-gold serif-title mb-4">₹599</p>
-                    <ul class="text-xs text-gray-400 space-y-2 mb-6">
-                        <li><i class="fas fa-check text-gold mr-2"></i>Basic Metallic Balloon Setup</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Standard Backdrop Ribbon</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>On-Time Executive Cleaning</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="w-full text-center border border-gold text-gold py-2 text-xs font-bold tracking-wide hover:bg-gold hover:text-black transition-colors">ENQUIRY NOW</a>
-            </div>
-            <div class="bg-dark-luxury p-6 border border-gold/40 flex flex-col justify-between relative" data-aos="fade-up" data-aos-delay="100">
-                <span class="absolute -top-3 left-6 bg-gold text-black text-[10px] font-bold px-3 py-1 tracking-widest">POPULAR</span>
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-1">Classic Package</h3>
-                    <p class="text-2xl font-bold text-gold serif-title mb-4">₹1,999</p>
-                    <ul class="text-xs text-gray-400 space-y-2 mb-6">
-                        <li><i class="fas fa-check text-gold mr-2"></i>Symmetrical Balloon Arch</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Curtain Background Setup</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Integrated LED Warm Lighting</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="w-full text-center bg-gold text-black py-2 text-xs font-bold tracking-wide hover-bg-gold transition-colors">ENQUIRY NOW</a>
-            </div>
-            <div class="bg-dark-luxury p-6 border border-amber-900/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-1">Premium Package</h3>
-                    <p class="text-2xl font-bold text-gold serif-title mb-4">₹3,499</p>
-                    <ul class="text-xs text-gray-400 space-y-2 mb-6">
-                        <li><i class="fas fa-check text-gold mr-2"></i>Chrome & Pastel Specialized Assemblies</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Complex Thematic Props</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Spotlight Focus Elements</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="w-full text-center border border-gold text-gold py-2 text-xs font-bold tracking-wide hover:bg-gold hover:text-black transition-colors">ENQUIRY NOW</a>
-            </div>
-            <div class="bg-dark-luxury p-6 border border-amber-900/10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                <div>
-                    <h3 class="text-lg font-bold text-white mb-1">Customized Package</h3>
-                    <p class="text-2xl font-bold text-gold serif-title mb-4">Custom</p>
-                    <ul class="text-xs text-gray-400 space-y-2 mb-6">
-                        <li><i class="fas fa-check text-gold mr-2"></i>Tailored Specific Palette Selection</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Custom Lettering Props</li>
-                        <li><i class="fas fa-check text-gold mr-2"></i>Dedicated Space Management</li>
-                    </ul>
-                </div>
-                <a href="#contact" class="w-full text-center border border-gold text-gold py-2 text-xs font-bold tracking-wide hover:bg-gold hover:text-black transition-colors">ENQUIRY NOW</a>
-            </div>
+    <!-- Gift Promo Banner -->
+    <section class="relative py-24 px-6 bg-cover bg-center text-white text-center" style="background-image: linear-gradient(rgba(35, 25, 18, 0.75), rgba(35, 25, 18, 0.75)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=1200');">
+        <div class="container mx-auto max-w-3xl" data-aos="zoom-in">
+            <p class="text-[#FFB703] font-bold text-xs uppercase tracking-widest mb-2">HOMEMADE PICKLES</p>
+            <h2 class="serif-title text-3xl md:text-5xl font-bold mb-4">Give the Gift of Authentic Taste</h2>
+            <p class="text-gray-300 text-sm md:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
+                Surprise your loved ones with rich, homemade pickles crafted with tradition, fresh ingredients, and love in every jar.
+            </p>
+            <button class="bg-crimson hover:bg-red-700 text-white font-bold px-8 py-3 rounded-md transition-all duration-300 shadow-md">
+                GIFT NOW
+            </button>
         </div>
     </section>
 
-    <!-- Custom Footer & Contact Matrix -->
-    <footer id="contact" class="bg-[#050505] text-gray-400 pt-20 pb-6 px-6 md:px-12 border-t border-amber-900/10">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            <div data-aos="fade-right">
-                <div class="flex items-center space-x-2 text-white mb-6">
-                    <span class="serif-title text-2xl font-bold tracking-wide text-gold">Happy Days Decors</span>
+    <!-- Footer -->
+    <footer class="bg-dark-brown text-gray-300 pt-16 pb-6 px-6 md:px-12 border-t border-amber-900/20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <!-- Brand Column -->
+            <div>
+                <div class="flex items-center space-x-2 text-white mb-4">
+                    <i class="fas fa-pepper-hot text-xl text-red-500 transform -rotate-45"></i>
+                    <span class="serif-title text-xl font-bold tracking-wide">Suravi Pickles</span>
                 </div>
-                <p class="text-sm text-gray-400 mb-8 leading-relaxed font-light">
-                    Affordable, trusted, and creative balloon & event decorations designed tailored to space constraints perfectly.
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    Authentic, homely, trustworthy, and flavorful. Bringing the rich culinary heritage of Andhra straight to your dining table.
                 </p>
-                <ul class="space-y-4 text-sm font-light">
-                    <li class="flex items-center space-x-3">
-                        <i class="fas fa-map-marker-alt text-gold w-5"></i>
-                        <span>Proddatur, Andhra Pradesh, 516360.</span>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fas fa-phone-alt text-gold w-5"></i>
-                        <a href="tel:+919908180194" class="hover:text-gold">+91 9908180194</a>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fas fa-envelope text-gold w-5"></i>
-                        <a href="mailto:happydaysdecors@gmail.com" class="hover:text-gold">happydaysdecors@gmail.com</a>
-                    </li>
+                <div class="flex space-x-4 text-lg">
+                    <a href="#" class="w-9 h-9 rounded-full bg-amber-900/30 flex items-center justify-center hover:bg-crimson hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 rounded-full bg-amber-900/30 flex items-center justify-center hover:bg-crimson hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="md:pl-12">
+                <h4 class="text-[#FFB703] font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">All Products</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
                 </ul>
             </div>
 
-            <div class="bg-dark-luxury p-8 border border-amber-900/10" data-aos="fade-left">
-                <form class="space-y-4">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="text" placeholder="Name" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light">
-                        <input type="tel" placeholder="Phone Number" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light">
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <input type="date" placeholder="Event Date" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light">
-                        <input type="text" placeholder="Event Type" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light">
-                    </div>
-                    <input type="number" placeholder="Budget (₹)" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light">
-                    <textarea placeholder="Message" rows="3" class="w-full bg-[#0B0B0B] border border-amber-900/20 px-4 py-3 text-sm text-white focus:outline-none focus:border-gold font-light"></textarea>
-                    <button type="submit" class="w-full bg-gold hover-bg-gold text-black font-bold text-sm py-3 tracking-wider transition-colors">
-                        SUBMIT REQUEST
-                    </button>
-                </form>
+            <!-- Contact Info -->
+            <div>
+                <h4 class="text-[#FFB703] font-bold mb-4 text-sm uppercase tracking-wider">Contact Info</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start space-x-2">
+                        <i class="fas fa-user text-[#FFB703] mt-1 text-xs"></i>
+                        <span>Mrs. MNP's</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fas fa-map-marker-alt text-[#FFB703] mt-1 text-xs"></i>
+                        <span>Proddatur, Andhra pradesh, 520010.</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fas fa-phone-alt text-[#FFB703] mt-1 text-xs"></i>
+                        <span>+91 9908180194</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                        <i class="fas fa-envelope text-[#FFB703] mt-1 text-xs"></i>
+                        <span>happydaysdecors@gmail.com</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <hr class="border-amber-900/10 mb-6">
+        <hr class="border-amber-900/30 mb-6">
 
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-2 font-light">
-            <p>&copy; 2026 Happy Days Decors. All Rights Reserved.</p>
-            <p>Designed with premium aesthetics for elegant micro celebrations.</p>
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-2">
+            <p>&copy; 2026 Happy Days Decors. All Rights Reserved. Crafted with love and spice.</p>
+            <p>Website designed by <span class="text-gray-400">@happydaysdecors</span></p>
         </div>
     </footer>
 
-    <!-- Runtime Nav Interactivity Configuration Logic -->
+    <!-- Initialize Animations -->
     <script>
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
             once: true
         });
-
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-        });
-
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            });
-        });
     </script>
 </body>
 </html>
+            
